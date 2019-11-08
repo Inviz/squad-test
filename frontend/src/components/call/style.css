@@ -1,0 +1,95 @@
+.grid {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	flex-basis: 100%;
+}
+
+.grid > *{
+	outline: 1px solid #000;
+	flex-basis: 100%;
+	flex-grow: 1;
+	height: 50%;
+}
+
+.grid[count="3"] > *{
+	flex-basis: 50%;
+}
+
+
+.grid[count="4"] > *{
+	flex-basis: 50%;
+}
+
+.grid[count="5"] > *{
+	flex-basis: 50%;
+	height: 33.33333%;
+}
+
+.grid[count="6"] > *{
+	height: 33.33333%;
+	flex-basis: 50%;
+}
+
+.grid[count="7"] > *{
+	flex-basis: 50%;
+	height: 33.33333%;
+}
+
+.grid[count="7"] > *:nth-of-type(3),
+.grid[count="7"] > *:nth-of-type(4),
+.grid[count="7"] > *:nth-of-type(5) {
+	flex-basis: 30%;
+}
+
+.grid[count="8"] > *{
+	flex-basis: 33.33333%;
+	height: 33.33333%;
+}
+
+.grid[count="9"] > *{
+	flex-basis: 33.33333%;
+	height: 33.33333%;
+}
+
+.grid:not([count="2"]):not([count="3"]):not([count="5"]) .me {
+	flex-basis: 50%;
+}
+
+
+.toolbar {
+	position: absolute;
+	z-index: 2;
+	bottom: .75rem;
+	left: 0;
+	right: 0;
+	margin: auto;
+	display: flex;
+	width: 225px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.pause {
+	background: #7610cf;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.pause img {
+	width: 75px;
+	height: 75px;
+	border: 3px solid #fff;
+	object-fit: cover;
+	border-radius: 100px;
+	margin-bottom: 1rem;
+}

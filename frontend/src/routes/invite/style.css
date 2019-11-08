@@ -1,0 +1,23 @@
+.profile {
+	padding: 56px 20px;
+	min-height: 100%;
+	width: 100%;
+}
+
+
+.footnote {
+  font-size: 11px;
+  margin: .5rem 0;
+  color: #868686;
+}
+
+.choices label {
+  display: block;
+}
+.choices {
+  margin-top: .5rem;
+}
+
+.choices input[type="radio"] {
+  margin: .5rem 1.5rem;
+}
